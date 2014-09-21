@@ -74,4 +74,4 @@ names(std.mean.data) <- names
 #    with the average of each variable for each activity and each subject.
 # ---------------------------------------------------------------------------
 tidy.data = ddply(std.mean.data, c("Subject","Activity"), numcolwise(mean))
-write.table(tidy.data, file = "tidy.txt", row.name = FALSE)
+write.table(tidy.data, file = "tidy.txt", row.name = FALSE, sep="\t")
